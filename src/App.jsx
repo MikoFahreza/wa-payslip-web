@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
-import Register from './pages/Register'; // <-- Import halaman baru
+import Register from './pages/Register';
+import Dashboard from './pages/Dashboard'; // 1. Import komponennya di sini
 
 function App() {
   return (
@@ -8,11 +9,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<Login />} />
-        
-        {/* Tambahkan rute Register di sini */}
         <Route path="/register" element={<Register />} />
-
-        <Route path="/dashboard" element={<h1 style={{textAlign: 'center', marginTop: '50px'}}>Selamat Datang di Dashboard HRD!</h1>} />
+        
+        {/* 2. Ganti elemen h1 menjadi komponen <Dashboard /> */}
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );

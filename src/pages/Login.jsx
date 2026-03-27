@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function Login() {
   // 1. useState adalah "Ingatan" React. 
@@ -80,7 +80,7 @@ export default function Login() {
       </form>
       
       <p style={{ marginTop: '20px', textAlign: 'center' }}>
-        Belum punya akun? <Link to="/register">Daftar HRD Baru</Link>
+        Belum punya akun? <Link to="/register">Buat Akun Baru</Link>
       </p>
     </div>
   );
