@@ -55,17 +55,39 @@ export default function Dashboard() {
     <div style={{ padding: '40px', fontFamily: 'sans-serif', maxWidth: '800px', margin: '0 auto' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <h2>Dashboard HRD</h2>
-        <button 
-          onClick={handleLogout} 
-          style={{ padding: '8px 15px', backgroundColor: '#DC3545', color: 'white', border: 'none', cursor: 'pointer', borderRadius: '4px' }}
-        >
-          Logout
-        </button>
+        
+        {/* --- BAGIAN YANG DIUBAH MULAI DARI SINI --- */}
+        <div>
+          <button 
+            onClick={() => navigate('/whatsapp')} 
+            style={{ padding: '8px 15px', backgroundColor: '#28A745', color: 'white', border: 'none', cursor: 'pointer', borderRadius: '4px', marginRight: '10px' }}
+          >
+            ⚙️ Pengaturan WA
+          </button>
+          
+          <button 
+            onClick={handleLogout} 
+            style={{ padding: '8px 15px', backgroundColor: '#DC3545', color: 'white', border: 'none', cursor: 'pointer', borderRadius: '4px' }}
+          >
+            Logout
+          </button>
+        </div>
+        {/* --- AKHIR BAGIAN YANG DIUBAH --- */}
+        
       </div>
 
       <hr style={{ margin: '20px 0' }} />
 
-      <h3>Daftar Karyawan</h3>
+      {/* Ubah bagian judul Daftar Karyawan menjadi sejajar dengan tombol Tambah */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <h3>Daftar Karyawan</h3>
+        <button 
+          onClick={() => navigate('/tambah-karyawan')} 
+          style={{ padding: '8px 15px', backgroundColor: '#007BFF', color: 'white', border: 'none', cursor: 'pointer', borderRadius: '4px' }}
+        >
+          + Tambah Karyawan
+        </button>
+      </div>
       
       {/* Tabel Sederhana */}
       <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '15px' }}>
